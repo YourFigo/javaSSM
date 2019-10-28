@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mybatis_2" />
         <module name="mybatis_1" />
+        <module name="mybatis_self" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="9">
       <module name="mybatis_1" target="1.8" />
       <module name="mybatis_2" target="1.8" />
+      <module name="mybatis_self" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
