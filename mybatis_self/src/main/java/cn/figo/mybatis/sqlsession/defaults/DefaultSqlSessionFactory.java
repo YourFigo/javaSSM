@@ -4,8 +4,6 @@ import cn.figo.mybatis.cfg.Configuration;
 import cn.figo.mybatis.sqlsession.SqlSession;
 import cn.figo.mybatis.sqlsession.SqlSessionFactory;
 
-import java.util.Collections;
-
 /**
  * @Author Figo
  * @Date 2019/10/28 22:19
