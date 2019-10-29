@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/javaSSM.iml" filepath="$PROJECT_DIR$/javaSSM.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis_1/mybatis_1.iml" filepath="$PROJECT_DIR$/mybatis_1/mybatis_1.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis_2/mybatis_2.iml" filepath="$PROJECT_DIR$/mybatis_2/mybatis_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis_crud/mybatis_crud.iml" filepath="$PROJECT_DIR$/mybatis_crud/mybatis_crud.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis_self/mybatis_self.iml" filepath="$PROJECT_DIR$/mybatis_self/mybatis_self.iml" />
     </modules>
   </component>
