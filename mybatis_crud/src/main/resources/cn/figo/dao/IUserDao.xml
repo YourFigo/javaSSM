@@ -60,6 +60,6 @@
 
     <!-- 根据queryVo的条件查询用户 -->
     <select id="findUserByVo" parameterType="cn.figo.domain.QueryVo" resultMap="userMap">
-        select * from user where username like #{user.username}
+        select * from user where username like #{user.userName}
     </select>
 </mapper>

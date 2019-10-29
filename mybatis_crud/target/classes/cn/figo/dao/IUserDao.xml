@@ -17,6 +17,7 @@
 
 
     <!-- 查询所有 -->
+    <!--配置好resultMap后，封装结果集使用resultMap属性，不配置使用resultType属性-->
     <select id="findAll" resultMap="userMap">
         <!--select id as userId,username as userName,address as userAddress,sex as userSex,birthday as userBirthday from user;-->
         select * from user;
@@ -49,7 +50,7 @@
     <!-- 根据名称模糊查询 -->
     <select id="findByName" parameterType="string" resultMap="userMap">
           select * from user where username like #{name}
-        <!-- select * from user where username like '%${value}%'-->
+        <!-- select * from user where username like '%${value}%' 这种方法本质上是sql语句的拼接方式实现的，因此不常用-->
    </select>
 
     <!-- 获取用户的总记录条数 -->
@@ -59,6 +60,6 @@
 
     <!-- 根据queryVo的条件查询用户 -->
     <select id="findUserByVo" parameterType="cn.figo.domain.QueryVo" resultMap="userMap">
-        select * from user where username like #{user.username}
+        select * from user where username like #{user.userName}
     </select>
 </mapper>
