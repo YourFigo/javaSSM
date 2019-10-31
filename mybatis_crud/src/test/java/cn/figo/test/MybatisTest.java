@@ -13,6 +13,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -150,6 +151,41 @@ public class MybatisTest {
         List<User> users = userDao.findUserByVo(vo);
         for(User u : users){
             System.out.println(u);
+        }
+    }
+
+    /**
+     * if标签和where标签的使用
+     */
+    @Test
+    public void testFindUserByCondition(){
+
+        User user = new User();
+        user.setUserName("%王%");
+        user.setUserAddress("%顺义%");
+        //5.执行查询一个方法
+        List<User> users = userDao.findUserByCondition(user);
+        for(User u : users){
+            System.out.println(u);
+        }
+    }
+
+    /**
+     * 测试foreach标签的使用
+     */
+    @Test
+    public void testFindInIds(){
+        QueryVo vo = new QueryVo();
+        List<Integer> list = new ArrayList<Integer>();
+        list.add(41);
+        list.add(46);
+        list.add(51);
+        vo.setIds(list);
+
+        //5.执行查询所有方法
+        List<User> users = userDao.findUserInIds(vo);
+        for(User user : users){
+            System.out.println(user);
         }
     }
 }

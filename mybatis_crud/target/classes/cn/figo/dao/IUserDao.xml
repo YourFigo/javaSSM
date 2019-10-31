@@ -20,7 +20,8 @@
     <!--配置好resultMap后，封装结果集使用resultMap属性，不配置使用resultType属性-->
     <select id="findAll" resultMap="userMap">
         <!--select id as userId,username as userName,address as userAddress,sex as userSex,birthday as userBirthday from user;-->
-        select * from user;
+        <!--select * from user;-->
+        <include refid="defaultUser"></include>
     </select>
 
     <!-- 保存用户 -->
@@ -62,4 +63,57 @@
     <select id="findUserByVo" parameterType="cn.figo.domain.QueryVo" resultMap="userMap">
         select * from user where username like #{user.userName}
     </select>
+
+    <!-- if 标签的使用-->
+<!--    <select id="findUserByCondition" parameterType="user" resultMap="userMap">
+        select * from user where 1=1
+        <if test="userName!=null and userName != '' ">
+            and username like #{userName}
+        </if>
+        <if test="userAddress != null">
+            and address like #{userAddress}
+        </if>
+    </select>-->
+
+    <!-- where 标签的使用
+    SQL 语句：
+        select 字段 from user where id in (?)
+    <foreach>标签用于遍历集合，它的属性：
+        collection:代表要遍历的集合元素，注意编写时不要写#{}
+        open:代表语句的开始部分
+        close:代表结束部分
+        item:代表遍历集合的每个元素，生成的变量名
+        sperator:代表分隔符
+    -->
+    <select id="findUserByCondition" parameterType="user" resultMap="userMap">
+        select * from user
+        <where>
+            <if test="userName!=null and userName != '' ">
+                and username like #{userName}
+            </if>
+            <if test="userAddress != null">
+                and address like #{userAddress}
+            </if>
+        </where>
+    </select>
+
+    <!-- 抽取重复的sql语句-->
+    <sql id="defaultUser">
+        select * from user
+    </sql>
+
+    <!-- foreach标签的使用，根据queryvo中的Id集合实现查询用户列表 -->
+    <!-- SELECT * FROM USERS WHERE id IN (41,46,51) -->
+    <select id="findUserInIds" resultMap="userMap" parameterType="queryvo">
+        <!--select * from user -->
+        <include refid="defaultUser"></include>
+        <where>
+            <if test="ids != null and ids.size()>0">
+                <foreach collection="ids" open="and id in (" close=")" item="uid" separator=",">
+                    #{uid}
+                </foreach>
+            </if>
+        </where>
+    </select>
+
 </mapper>
