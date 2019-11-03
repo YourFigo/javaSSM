@@ -92,4 +92,11 @@ public interface IUserDao {
      * @return
      */
     User findUserAccountById(Integer userId);
+
+    /////////////////////////多对多的测试/////////////////////////
+    /**
+     * 查询所有用户，同时获取到用户下所有账户的信息
+     * @return
+     */
+    List<User> findUserRole();
 }

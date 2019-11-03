@@ -72,4 +72,17 @@ public class UserTest {
         System.out.println(user);
         System.out.println(user.getAccounts());
     }
+
+    /**
+     * 测试多对多查询所有 user
+     */
+    @Test
+    public void testFindUserRole(){
+        List<User> users = userDao.findUserRole();
+        for(User user : users){
+            System.out.println("-----每个用户的信息------");
+            System.out.println(user);
+            System.out.println(user.getRoles());
+        }
+    }
 }

@@ -144,4 +144,26 @@
        select * from user u left outer join account a on u.id = a.uid where id = #{uid}
     </select>
 
+    <!-- ++++++++++++++++++++++++++++ 多对多查询 +++++++++++++++++++++++++++++++ -->
+    <!-- 定义User的resultMap-->
+    <resultMap id="userRoleMap" type="user">
+        <id property="userId" column="id"></id>
+        <result property="userName" column="username"></result>
+        <result property="userAddress" column="address"></result>
+        <result property="userSex" column="sex"></result>
+        <result property="userBirthday" column="birthday"></result>
+        <!-- 配置角色集合的映射 -->
+        <collection property="roles" ofType="role">
+            <id property="roleId" column="rid"></id>
+            <result property="roleName" column="role_name"></result>
+            <result property="roleDesc" column="role_desc"></result>
+        </collection>
+    </resultMap>
+
+    <!-- 查询所有 -->
+    <select id="findUserRole" resultMap="userRoleMap">
+        select u.*,r.id as rid,r.role_name,r.role_desc from user u
+         left outer join user_role ur  on u.id = ur.uid
+         left outer join role r on r.id = ur.rid
+    </select>
 </mapper>
