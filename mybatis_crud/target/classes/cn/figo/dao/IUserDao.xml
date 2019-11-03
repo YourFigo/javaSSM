@@ -116,4 +116,32 @@
         </where>
     </select>
 
+    <!-- ++++++++++++++++++++++++++++ 一对多查询 +++++++++++++++++++++++++++++++ -->
+    <!-- 定义User的resultMap-->
+    <resultMap id="userAccountMap" type="user">
+        <!-- 主键字段的对应 -->
+        <id property="userId" column="id"></id>
+        <!--非主键字段的对应-->
+        <result property="userName" column="username"></result>
+        <result property="userAddress" column="address"></result>
+        <result property="userSex" column="sex"></result>
+        <result property="userBirthday" column="birthday"></result>
+        <!-- 配置user对象中accounts集合的映射 -->
+        <collection property="accounts" ofType="account">
+            <id property="aid" column="aid"></id>
+            <result property="uid" column="uid"></result>
+            <result property="money" column="money"></result>
+        </collection>
+    </resultMap>
+
+    <!-- 查询所有 user的一对多的信息 -->
+    <select id="findUserAccount" resultMap="userAccountMap">
+        select * from user u left outer join account a on u.id = a.uid
+    </select>
+
+    <!-- 根据id查询用户 的一对多的信息 -->
+    <select id="findUserAccountById" resultMap="userAccountMap" parameterType="int">
+       select * from user u left outer join account a on u.id = a.uid where id = #{uid}
+    </select>
+
 </mapper>

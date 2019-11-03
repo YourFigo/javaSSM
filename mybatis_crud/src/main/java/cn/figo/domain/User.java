@@ -2,6 +2,7 @@ package cn.figo.domain;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @Author Figo
@@ -14,6 +15,17 @@ public class User implements Serializable {
     private String userAddress;
     private String userSex;
     private Date userBirthday;
+
+    //一对多关系映射：主表实体应该包含从表实体的集合引用
+    private List<Account> accounts;
+
+    public List<Account> getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(List<Account> accounts) {
+        this.accounts = accounts;
+    }
 
     public Integer getUserId() {
         return userId;

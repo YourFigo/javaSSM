@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.figo.dao.IAccountDao">
+
+    <!-- 定义封装account和user的resultMap -->
+    <resultMap id="accountUserMap" type="account">
+        <id property="aid" column="aid"></id>
+        <result property="uid" column="uid"></result>
+        <result property="money" column="money"></result>
+        <!-- 一对一的关系映射：配置封装user的内容-->
+        <association property="user" column="uid" javaType="user">
+            <id property="userId" column="id"></id>
+            <result property="userName" column="username"></result>
+            <result property="userAddress" column="address"></result>
+            <result property="userSex" column="sex"></result>
+            <result property="userBirthday" column="birthday"></result>
+        </association>
+    </resultMap>
+
+    <!-- 查询所有 -->
+    <select id="findAll" resultMap="accountUserMap">
+        select u.*,a.aid as aid,a.uid,a.money from account a , user u where u.id = a.uid;
+    </select>
+
+    <!--查询所有账户同时包含用户名和地址信息-->
+    <select id="findAllAccount" resultType="accountuser">
+        select a.*,u.username,u.address from account a , user u where u.id = a.uid;
+    </select>
+
+</mapper>
