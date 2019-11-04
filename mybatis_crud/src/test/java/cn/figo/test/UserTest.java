@@ -85,4 +85,20 @@ public class UserTest {
             System.out.println(user.getRoles());
         }
     }
+
+    /**
+     * 测试user一对多查询所有
+     */
+    @Test
+    public void testFindAllLazyMulti(){
+        List<User> users = userDao.findAllLazyMulti();
+        for(User user : users){
+            System.out.println("--------每个user的信息------------");
+            System.out.println(user);
+            // 这里先执行 Preparing: select * from user;  后执行 select * from account where uid = ?
+            // 如果这里不使用 user.getAccounts()，那么就不会执行 select * from account where uid = ?
+            // 这就是延迟加载
+            System.out.println(user.getAccounts());
+        }
+    }
 }

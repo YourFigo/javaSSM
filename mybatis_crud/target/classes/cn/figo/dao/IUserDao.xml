@@ -166,4 +166,21 @@
          left outer join user_role ur  on u.id = ur.uid
          left outer join role r on r.id = ur.rid
     </select>
+
+
+    <!-- ++++++++++++++++ 多对一延迟加载 ++++++++++++++++++++++ -->
+    <resultMap id="userAccountLazyMap" type="user">
+        <id property="userId" column="id"></id>
+        <result property="userName" column="username"></result>
+        <result property="userAddress" column="address"></result>
+        <result property="userSex" column="sex"></result>
+        <result property="userBirthday" column="birthday"></result>
+        <!-- 配置user对象中accounts集合的映射 -->
+        <collection property="accounts" ofType="account" select="cn.figo.dao.IAccountDao.findAccountByUidLazy" column="id"></collection>
+    </resultMap>
+
+    <select id="findAllLazyMulti" resultMap="userAccountLazyMap">
+        select * from user;
+    </select>
+
 </mapper>

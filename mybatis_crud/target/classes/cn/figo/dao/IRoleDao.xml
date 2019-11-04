@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.figo.dao.IRoleDao">
+
+    <!--定义role表的ResultMap-->
+    <resultMap id="roleMap" type="role">
+        <id property="roleId" column="rid"></id>
+        <result property="roleName" column="role_name"></result>
+        <result property="roleDesc" column="role_desc"></result>
+        <collection property="users" ofType="user">
+            <id property="userId" column="id"></id>
+            <result property="userName" column="username"></result>
+            <result property="userAddress" column="address"></result>
+            <result property="userSex" column="sex"></result>
+            <result property="userBirthday" column="birthday"></result>
+        </collection>
+    </resultMap>
+
+    <!--查询所有-->
+    <select id="findAll" resultMap="roleMap">
+       select r.id as rid,r.role_name,r.role_desc,u.* from role r
+       left outer join user_role ur  on r.id = ur.rid
+       left outer join user u on u.id = ur.uid
+    </select>
+</mapper>

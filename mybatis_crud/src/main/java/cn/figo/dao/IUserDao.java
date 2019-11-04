@@ -1,6 +1,7 @@
 package cn.figo.dao;
 
 
+import cn.figo.domain.Account;
 import cn.figo.domain.QueryVo;
 import cn.figo.domain.User;
 
@@ -99,4 +100,10 @@ public interface IUserDao {
      * @return
      */
     List<User> findUserRole();
+
+    /**
+     * 多对一延迟加载
+     * @return
+     */
+    List<User> findAllLazyMulti();
 }

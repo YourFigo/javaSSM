@@ -22,4 +22,16 @@ public interface IAccountDao {
      * @return
      */
     List<AccountUser> findAllAccount();
+
+    /**
+     * 一对一延迟加载
+     * @return
+     */
+    List<Account> findAllLazy();
+
+    /**
+     * 根据用户id查询账户信息，多对一延迟加载中用到
+     * @return
+     */
+    List<Account> findAccountByUidLazy();
 }

@@ -70,5 +70,21 @@ public class AccountTest {
             System.out.println(au);
         }
     }
+
+    /**
+     * 一对一 延迟加载
+     */
+    @Test
+    public void testFindAllLazy(){
+        List<Account> accounts = accountDao.findAllLazy();
+        for(Account account : accounts){
+            System.out.println("--------每个account的信息------------");
+            System.out.println(account);
+            // 这里先执行 select * from account  后执行 select * from user where id = ?
+            // 如果这里不使用 account.getUser()，那么就不会执行 select * from user where id = ?
+            // 这就是延迟加载
+            //System.out.println(account.getUser());
+        }
+    }
 }
 

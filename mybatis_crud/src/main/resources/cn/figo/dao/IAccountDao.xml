@@ -29,4 +29,29 @@
         select a.*,u.username,u.address from account a , user u where u.id = a.uid;
     </select>
 
+    <!-- ++++++++++++++++ 一对一延迟加载 ++++++++++++++++++++++ -->
+
+    <!-- 延迟加载的测试 -->
+    <!-- 实现一对一进行延迟加载 -->
+    <resultMap id="accountUserLazyMap" type="account">
+        <id property="id" column="id"></id>
+        <result property="uid" column="uid"></result>
+        <result property="money" column="money"></result>
+        <!-- 一对一的关系映射：配置封装user的内容
+        select属性指定的内容：查询用户的唯一标识：
+        column属性指定的内容：用户根据id查询时，所需要的参数的值
+        -->
+        <association property="user" column="uid" javaType="user" select="cn.figo.dao.IUserDao.findById"></association>
+    </resultMap>
+
+    <!-- 查询所有 -->
+    <select id="findAllLazy" resultMap="accountUserLazyMap">
+        select * from account
+    </select>
+
+    <!-- 多对一 延迟加载 中使用 -->
+    <select id="findAccountByUidLazy" resultType="account">
+        select * from account where uid = #{uid}
+    </select>
+
 </mapper>

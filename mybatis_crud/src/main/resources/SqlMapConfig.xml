@@ -24,6 +24,12 @@
         <property name="password" value="1234"></property>-->
     </properties>
 
+    <settings>
+        <!-- 开启Mybatis支持延迟加载 -->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="aggressiveLazyLoading" value="false"/>
+    </settings>
+
     <!--使用typeAliases配置别名，它只能配置domain中类的别名 -->
     <typeAliases>
         <!--typeAlias用于配置别名。type属性指定的是实体类全限定类名。alias属性指定别名，当指定了别名就再区分大小写 
