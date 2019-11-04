@@ -78,7 +78,7 @@ public class User implements Serializable {
         this.userBirthday = userBirthday;
     }
 
-    @Override
+   /* @Override
     public String toString() {
         return "User{" +
                 "userId=" + userId +
@@ -87,5 +87,5 @@ public class User implements Serializable {
                 ", userSex='" + userSex + '\'' +
                 ", userBirthday=" + userBirthday +
                 '}';
-    }
+    }*/
 }

@@ -24,6 +24,7 @@ public class UserTest {
 
 
     private InputStream in;
+    SqlSessionFactory factory;
     private SqlSession sqlSession;
     private IUserDao userDao;
 
@@ -32,7 +33,7 @@ public class UserTest {
         //1.读取配置文件，生成字节输入流
         in = Resources.getResourceAsStream("SqlMapConfig.xml");
         //2.获取SqlSessionFactory
-        SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(in);
+        factory = new SqlSessionFactoryBuilder().build(in);
         //3.获取SqlSession对象
         // factory.openSession(true) 参数为 true，表示自动提交事务
         sqlSession = factory.openSession(true);
@@ -87,7 +88,7 @@ public class UserTest {
     }
 
     /**
-     * 测试user一对多查询所有
+     * 测试user一对多查询所有 延迟加载
      */
     @Test
     public void testFindAllLazyMulti(){
@@ -100,5 +101,27 @@ public class UserTest {
             // 这就是延迟加载
             System.out.println(user.getAccounts());
         }
+    }
+
+    /**
+     * 测试一级缓存
+     */
+    @Test
+    public void testFirstLevelCache(){
+        User user1 = userDao.findById(41);
+        System.out.println(user1);
+
+        //sqlSession.close();
+        //再次获取SqlSession对象
+        //sqlSession = factory.openSession();
+
+        sqlSession.clearCache();//此方法也可以清空缓存
+
+        userDao = sqlSession.getMapper(IUserDao.class);
+
+        User user2 = userDao.findById(41);
+        System.out.println(user2);
+
+        System.out.println(user1 == user2);
     }
 }
