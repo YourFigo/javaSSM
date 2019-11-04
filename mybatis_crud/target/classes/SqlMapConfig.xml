@@ -28,6 +28,8 @@
         <!-- 开启Mybatis支持延迟加载 -->
         <setting name="lazyLoadingEnabled" value="true"/>
         <setting name="aggressiveLazyLoading" value="false"/>
+        <!-- 开启二级缓存-->
+        <setting name="cacheEnabled" value="true"/>
     </settings>
 
     <!--使用typeAliases配置别名，它只能配置domain中类的别名 -->

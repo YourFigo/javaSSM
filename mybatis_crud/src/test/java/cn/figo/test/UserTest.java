@@ -1,9 +1,6 @@
 package cn.figo.test;
 
-import cn.figo.dao.IAccountDao;
 import cn.figo.dao.IUserDao;
-import cn.figo.domain.Account;
-import cn.figo.domain.AccountUser;
 import cn.figo.domain.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -121,6 +118,47 @@ public class UserTest {
 
         User user2 = userDao.findById(41);
         System.out.println(user2);
+
+        System.out.println(user1 == user2);
+    }
+
+    /**
+     * 测试缓存的同步
+     */
+    @Test
+    public void testClearlCache(){
+        //1.根据id查询用户
+        User user1 = userDao.findById(41);
+        System.out.println(user1);
+
+        //2.更新用户信息
+        user1.setUserName("update user clear cache");
+        user1.setUserAddress("北京市海淀区");
+        userDao.updateUser(user1);
+
+        //3.再次查询id为41的用户
+        User user2 = userDao.findById(41);
+        System.out.println(user2);
+
+        System.out.println(user1 == user2);
+    }
+
+    /**
+     * 测试二级缓存
+     */
+    @Test
+    public void testSecondLevelCache(){
+        SqlSession sqlSession1 = factory.openSession();
+        IUserDao dao1 = sqlSession1.getMapper(IUserDao.class);
+        User user1 = dao1.findById(41);
+        System.out.println(user1);
+        sqlSession1.close();//一级缓存消失
+
+        SqlSession sqlSession2 = factory.openSession();
+        IUserDao dao2 = sqlSession2.getMapper(IUserDao.class);
+        User user2 = dao2.findById(41);
+        System.out.println(user2);
+        sqlSession2.close();
 
         System.out.println(user1 == user2);
     }
