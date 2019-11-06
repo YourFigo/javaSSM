@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 引入外部配置文件-->
+    <properties resource="jdbcConfig.properties"></properties>
+    <!--配置别名-->
+    <typeAliases>
+        <package name="cn.figo.domain"></package>
+    </typeAliases>
+    <!-- 配置环境-->
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"></property>
+                <property name="url" value="${jdbc.url}"></property>
+                <property name="username" value="${jdbc.username}"></property>
+                <property name="password" value="${jdbc.password}"></property>
+            </dataSource>
+        </environment>
+    </environments>
+    <!-- 指定带有注解的dao接口所在位置 -->
+    <mappers>
+        <mapper class="cn.figo.dao.IUserDao"></mapper>
+    </mappers>
+</configuration>
