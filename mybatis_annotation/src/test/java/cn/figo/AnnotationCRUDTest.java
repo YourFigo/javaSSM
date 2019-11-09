@@ -41,7 +41,7 @@ public class AnnotationCRUDTest {
     }
 
 
-    @Test
+    /*@Test
     public void testSave(){
         User user = new User();
         user.setUsername("mybatis annotation");
@@ -60,7 +60,7 @@ public class AnnotationCRUDTest {
         user.setBirthday(new Date());
 
         userDao.updateUser(user);
-    }
+    }*/
 
     @Test
     public void testDelete(){
@@ -71,6 +71,34 @@ public class AnnotationCRUDTest {
     public void testFindOne(){
         User user = userDao.findById(53);
         System.out.println(user);
+
+        User user2 = userDao.findById(53);
+        System.out.println(user2);
+
+        // 一级缓存默认是开启的
+        System.out.println(user == user2);
+    }
+
+    /**
+     * 二级缓存
+     */
+    @Test
+    public void testFindOneSecondCache(){
+        SqlSession session1 = factory.openSession();
+        IUserDao userDao1 = session1.getMapper(IUserDao.class);
+        User user = userDao1.findById(53);
+        System.out.println(user);
+        session1.close();
+
+        SqlSession session2 = factory.openSession();
+        IUserDao userDao2 = session2.getMapper(IUserDao.class);
+        User user2 = userDao2.findById(53);
+        System.out.println(user2);
+        session2.close();
+
+        // 二级缓存 需要配置
+        // 二级缓存 存的是数据，而不是对象
+        System.out.println(user == user2);
     }
 
     @Test

@@ -1,10 +1,8 @@
 package cn.figo.dao;
 
 import cn.figo.domain.User;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.mapping.FetchType;
 
 import java.util.List;
 
@@ -12,12 +10,21 @@ import java.util.List;
  * @Author Figo
  * @Date 2019/11/6 23:07
  */
+// 开启二级缓存
+@CacheNamespace(blocking = true)
 public interface IUserDao {
 
     /**
      * 查询所有用户
      * @return
      */
+    @Results(id="userMap",value={
+            @Result(id=true,column = "id",property = "userId"),
+            @Result(column = "username",property = "userName"),
+            @Result(column = "address",property = "userAddress"),
+            @Result(column = "sex",property = "userSex"),
+            @Result(column = "birthday",property = "userBirthday")
+    })
     @Select("select * from user")
     List<User> findAll();
 
@@ -48,6 +55,7 @@ public interface IUserDao {
      * @return
      */
     @Select("select * from user  where id=#{id} ")
+    @ResultMap("userMap")
     User findById(Integer userId);
 
     /**
@@ -65,5 +73,22 @@ public interface IUserDao {
      */
     @Select("select count(*) from user ")
     int findTotalUser();
+
+    /**
+     * 查询所有用户
+     * @return
+     */
+    @Select("select * from user")
+    @Results(id="userAccountMap",value={
+            @Result(id=true,column = "id",property = "userId"),
+            @Result(column = "username",property = "userName"),
+            @Result(column = "address",property = "userAddress"),
+            @Result(column = "sex",property = "userSex"),
+            @Result(column = "birthday",property = "userBirthday"),
+            @Result(property = "accounts",column = "id",
+                    many = @Many(select = "cn.figo.dao.IAccountDao.findAccountByUid",
+                            fetchType = FetchType.LAZY))
+    })
+    List<User> findAllUserAccount();
 
 }

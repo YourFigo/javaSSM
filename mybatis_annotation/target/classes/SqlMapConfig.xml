@@ -5,6 +5,12 @@
 <configuration>
     <!-- 引入外部配置文件-->
     <properties resource="jdbcConfig.properties"></properties>
+
+    <!--开启二级缓存-->
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+
     <!--配置别名-->
     <typeAliases>
         <package name="cn.figo.domain"></package>
@@ -23,6 +29,7 @@
     </environments>
     <!-- 指定带有注解的dao接口所在位置 -->
     <mappers>
-        <mapper class="cn.figo.dao.IUserDao"></mapper>
+        <!--<mapper class="cn.figo.dao.IUserDao"></mapper>-->
+        <package name="cn.figo.dao"/>
     </mappers>
 </configuration>
