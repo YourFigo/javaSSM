@@ -44,7 +44,7 @@ public class UserTest {
         for(User user : users){
             System.out.println("---每个用户的信息----");
             System.out.println(user);
-            // System.out.println(user.getAccounts());
+            System.out.println(user.getAccounts());
         }
     }
 }

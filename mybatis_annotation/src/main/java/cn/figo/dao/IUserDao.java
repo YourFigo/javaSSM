@@ -65,6 +65,7 @@ public interface IUserDao {
      */
     @Select("select * from user where username like #{username} ")
 //    @Select("select * from user where username like '%${value}%' ")
+    @ResultMap("userMap")
     List<User> findUserByName(String username);
 
     /**
@@ -75,7 +76,7 @@ public interface IUserDao {
     int findTotalUser();
 
     /**
-     * 查询所有用户
+     * 查询所有用户 一对多
      * @return
      */
     @Select("select * from user")

@@ -41,7 +41,7 @@ public class AnnotationCRUDTest {
     }
 
 
-    /*@Test
+/*    @Test
     public void testSave(){
         User user = new User();
         user.setUsername("mybatis annotation");
