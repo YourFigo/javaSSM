@@ -33,7 +33,7 @@ public class BeanFactory {
         try {
             //实例化对象
             props = new Properties();
-            //获取properties文件的流对象
+            //使用类加载器，获取properties文件的流对象
             InputStream in = BeanFactory.class.getClassLoader().getResourceAsStream("bean.properties");
             props.load(in);
             //实例化容器
@@ -69,8 +69,8 @@ public class BeanFactory {
      * 根据Bean的名称获取bean对象
      * @param beanName
      * @return
-
-    public static Object getBean(String beanName){
+     * */
+    /*public static Object getBean(String beanName){
         Object bean = null;
         try {
             String beanPath = props.getProperty(beanName);

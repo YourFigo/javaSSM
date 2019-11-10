@@ -13,7 +13,7 @@ public class Client {
         for(int i=0;i<5;i++) {
             IAccountService as = (IAccountService) BeanFactory.getBean("accountService");
             System.out.println(as);
-            as.saveAccount();
+            // as.saveAccount();
         }
 
     }
