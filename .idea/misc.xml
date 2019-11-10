@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/mybatis_self/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis_crud/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis_annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_1_demo/pom.xml" />
       </list>
     </option>
   </component>
