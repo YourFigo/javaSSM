@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--默认构造函数创建bean对象-->
+<!--    <bean id="accountService" class="cn.figo.service.impl.AccountServiceImpl"></bean>-->
+    <bean id="accountDao" class="cn.figo.dao.impl.AccountDaoImpl"></bean>
+
+<!--    通过某个类的普通方法创建一个bean对象-->
+ <!--   <bean id="instanceFactory" class="cn.figo.factory.InstanceFactory"></bean>
+    <bean id="accountService" factory-bean="instanceFactory" factory-method="getAccountService"></bean>-->
+
+<!--    通过一个类的静态方法来创建一个bean对象-->
+   <!-- <bean id="accountService" class="cn.figo.factory.StaticFactory" factory-method="getAccountService"></bean>-->
+
+<!--    bean 的作用范围-->
+<!--    <bean id="accountService" class="cn.figo.service.impl.AccountServiceImpl" scope="singleton"></bean>-->
+
+    <bean id="accountService" class="cn.figo.service.impl.AccountServiceImpl"
+          scope="prototype" init-method="init" destroy-method="destroy"></bean>
+
+</beans>
