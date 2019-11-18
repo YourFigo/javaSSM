@@ -1,6 +1,7 @@
 package cn.figo.ui;
 
 import cn.figo.service.IAccountService;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**

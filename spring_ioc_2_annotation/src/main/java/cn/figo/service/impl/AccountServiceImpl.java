@@ -8,6 +8,9 @@ package cn.figo.service.impl;
 import cn.figo.dao.IAccountDao;
 import cn.figo.service.IAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -78,12 +81,13 @@ import javax.annotation.Resource;
  *          作用：用于指定初始化方法
  */
 @Service("accountService")
+//@Component("accountService")
 //@Scope("prototype")
 public class AccountServiceImpl implements IAccountService {
 
     @Autowired
-//    @Qualifier("accountDao1")
-//    @Resource(name = "accountDao2")
+    @Qualifier("accountDao2")
+//    @Resource(name = "accountDao1")
     private IAccountDao accountDao = null;
 
     @PostConstruct
