@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring_1_demo/spring_1_demo.iml" filepath="$PROJECT_DIR$/spring_1_demo/spring_1_demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_ioc_1/spring_ioc_1.iml" filepath="$PROJECT_DIR$/spring_ioc_1/spring_ioc_1.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_ioc_2_annotation/spring_ioc_2_annotation.iml" filepath="$PROJECT_DIR$/spring_ioc_2_annotation/spring_ioc_2_annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_ioc_3_account_xml/spring_ioc_3_account_xml.iml" filepath="$PROJECT_DIR$/spring_ioc_3_account_xml/spring_ioc_3_account_xml.iml" />
     </modules>
   </component>
 </project>
