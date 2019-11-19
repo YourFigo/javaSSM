@@ -10,19 +10,17 @@
     <!-- 告知spring在创建容器时要扫描的包 -->
     <context:component-scan base-package="cn.figo"></context:component-scan>
 
-<!--
-    &lt;!&ndash; 配置Service &ndash;&gt;
+    <!-- 配置Service -->
     <bean id="accountService" class="cn.figo.service.impl.AccountServiceImpl">
-        &lt;!&ndash; 注入dao set方法注入 &ndash;&gt;
+        <!-- 注入dao set方法注入 -->
         <property name="accountDao" ref="accountDao"></property>
     </bean>
 
-    &lt;!&ndash;配置Dao对象 set方法注入 &ndash;&gt;
+    <!--配置Dao对象 set方法注入 -->
     <bean id="accountDao" class="cn.figo.dao.impl.AccountDaoImpl">
-        &lt;!&ndash; 注入QueryRunner &ndash;&gt;
+        <!-- 注入QueryRunner -->
         <property name="runner" ref="runner"></property>
     </bean>
-    -->
 
     <!--配置QueryRunner 构造函数注入 -->
     <bean id="runner" class="org.apache.commons.dbutils.QueryRunner" scope="prototype">

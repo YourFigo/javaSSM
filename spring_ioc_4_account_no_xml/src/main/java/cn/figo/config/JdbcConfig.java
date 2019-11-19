@@ -34,6 +34,7 @@ public class JdbcConfig {
     @Bean(name="runner")
     @Scope("prototype")
     public QueryRunner createQueryRunner(@Qualifier("ds2") DataSource dataSource){
+        // @Qualifier("ds2") 注解用于指定name的bean进行注入，而不是使用Autowired的方式
         return new QueryRunner(dataSource);
     }
 
@@ -55,7 +56,7 @@ public class JdbcConfig {
         }
     }
 
-    @Bean(name="ds1")
+    @Bean(name="dataSource")
     public DataSource createDataSource1(){
         try {
             ComboPooledDataSource ds = new ComboPooledDataSource();

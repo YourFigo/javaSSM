@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * 账户的业务层实现类
  */
-@Service("accountService")
+//@Service("accountService")
 public class AccountServiceImpl implements IAccountService {
 
     @Autowired
