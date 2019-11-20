@@ -7,12 +7,23 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!--配置beanfactory-->
+    <bean id="beanFactory" class="cn.figo.factory.BeanFactory">
+        <!-- 注入service -->
+        <property name="accountService" ref="accountService"></property>
+        <!-- 注入事务管理器 -->
+        <property name="txManager" ref="txManager"></property>
+    </bean>
+
+    <!--配置代理的service-->
+    <bean id="proxyAccountService" factory-bean="beanFactory" factory-method="getAccountService"></bean>
+
     <!-- 配置Service -->
     <bean id="accountService" class="cn.figo.service.impl.AccountServiceImpl">
         <!-- 注入dao set方法注入 -->
         <property name="accountDao" ref="accountDao"></property>
         <!-- 注入事务管理器 -->
-        <property name="txManager" ref="txManager"></property>
+        <!--<property name="txManager" ref="txManager"></property>-->
     </bean>
 
     <!--配置Dao对象 set方法注入 -->
