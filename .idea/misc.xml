@@ -16,6 +16,7 @@
         <option value="$PROJECT_DIR$/spring_ioc_3_account_xml/pom.xml" />
         <option value="$PROJECT_DIR$/spring_ioc_4_account_no_xml/pom.xml" />
         <option value="$PROJECT_DIR$/spring_aop_1_transaction/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_aop_2_proxy/pom.xml" />
       </list>
     </option>
   </component>

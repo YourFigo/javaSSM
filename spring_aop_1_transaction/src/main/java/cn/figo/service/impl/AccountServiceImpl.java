@@ -98,7 +98,6 @@ public class AccountServiceImpl implements IAccountService {
         }catch (Exception e){
             //5.回滚操作
             txManager.rollback();
-            e.printStackTrace();
         }finally {
             //6.释放连接
             txManager.release();
@@ -150,6 +149,7 @@ public class AccountServiceImpl implements IAccountService {
         }catch (Exception e){
             //5.回滚操作
             txManager.rollback();
+            e.printStackTrace();
         }finally {
             //6.释放连接
             txManager.release();

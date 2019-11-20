@@ -11,18 +11,23 @@
     <bean id="accountService" class="cn.figo.service.impl.AccountServiceImpl">
         <!-- 注入dao set方法注入 -->
         <property name="accountDao" ref="accountDao"></property>
+        <!-- 注入事务管理器 -->
+        <property name="txManager" ref="txManager"></property>
     </bean>
 
     <!--配置Dao对象 set方法注入 -->
     <bean id="accountDao" class="cn.figo.dao.impl.AccountDaoImpl">
         <!-- 注入QueryRunner -->
         <property name="runner" ref="runner"></property>
+        <!-- 注入ConnectionUtils -->
+        <property name="connectionUtils" ref="connectionUtils"></property>
     </bean>
 
     <!--配置QueryRunner 构造函数注入 -->
     <bean id="runner" class="org.apache.commons.dbutils.QueryRunner" scope="prototype">
         <!--注入数据源-->
-        <constructor-arg name="ds" ref="dataSource"></constructor-arg>
+        <!-- 使用工具类后，并不要每次都注入一个连接 -->
+        <!--<constructor-arg name="ds" ref="dataSource"></constructor-arg>-->
     </bean>
 
     <!-- 配置数据源 -->
@@ -33,4 +38,17 @@
         <property name="user" value="root"></property>
         <property name="password" value="123456"></property>
     </bean>
+
+    <!-- 配置Connection的工具类 ConnectionUtils -->
+    <bean id="connectionUtils" class="cn.figo.utils.ConnectionUtils">
+        <!-- 注入数据源-->
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <!-- 配置事务管理器-->
+    <bean id="txManager" class="cn.figo.utils.TransactionManager">
+        <!-- 注入ConnectionUtils -->
+        <property name="connectionUtils" ref="connectionUtils"></property>
+    </bean>
+
 </beans>
