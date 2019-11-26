@@ -18,6 +18,8 @@
         <option value="$PROJECT_DIR$/spring_aop_1_transaction/pom.xml" />
         <option value="$PROJECT_DIR$/spring_aop_2_proxy/pom.xml" />
         <option value="$PROJECT_DIR$/spring_aop_3_example/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_aop_4_annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_aop_3_xml/pom.xml" />
       </list>
     </option>
   </component>
