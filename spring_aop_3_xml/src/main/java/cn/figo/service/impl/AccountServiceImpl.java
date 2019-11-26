@@ -5,7 +5,6 @@ package cn.figo.service.impl;
  * @Date 2019/11/26 21:28
  */
 
-
 import cn.figo.service.IAccountService;
 
 /**
@@ -16,6 +15,7 @@ public class AccountServiceImpl implements IAccountService {
     @Override
     public void saveAccount() {
         System.out.println("执行了保存");
+//        int i = 1/0;
     }
 
     @Override
