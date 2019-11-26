@@ -68,17 +68,20 @@
             <!-- 配置通知的类型，并且建立通知方法和切入点方法的关联-->
             <!--<aop:before method="printLog" pointcut="execution(* cn.figo.service.impl.*.*(..))"></aop:before>-->
 
-            <!--配置前置通知：在切入点方法执行之前执行-->
+            <!--&lt;!&ndash;配置前置通知：在切入点方法执行之前执行&ndash;&gt;
             <aop:before method="beforePrintLog" pointcut-ref="pt1" ></aop:before>
 
-             <!--配置后置通知：在切入点方法正常执行之后值。它和异常通知永远只能执行一个-->
+             &lt;!&ndash;配置后置通知：在切入点方法正常执行之后值。它和异常通知永远只能执行一个&ndash;&gt;
             <aop:after-returning method="afterReturningPrintLog" pointcut-ref="pt1"></aop:after-returning>
 
-             <!--配置异常通知：在切入点方法执行产生异常之后执行。它和后置通知永远只能执行一个-->
+             &lt;!&ndash;配置异常通知：在切入点方法执行产生异常之后执行。它和后置通知永远只能执行一个&ndash;&gt;
             <aop:after-throwing method="afterThrowingPrintLog" pointcut-ref="pt1"></aop:after-throwing>
 
-             <!--配置最终通知：无论切入点方法是否正常执行它都会在其后面执行-->
-            <aop:after method="afterPrintLog" pointcut-ref="pt1"></aop:after>
+             &lt;!&ndash;配置最终通知：无论切入点方法是否正常执行它都会在其后面执行&ndash;&gt;
+            <aop:after method="afterPrintLog" pointcut-ref="pt1"></aop:after>-->
+
+            <!-- 配置环绕通知 详细的注释请看Logger类中-->
+            <aop:around method="aroundPringLog" pointcut-ref="pt1"></aop:around>
         </aop:aspect>
     </aop:config>
 
