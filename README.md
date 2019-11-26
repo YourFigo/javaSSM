@@ -11,6 +11,8 @@
 - spring_1_demo：自定义BeanFactory，简单分析spring执行
 - spring_aop_1_transaction：耦合度过高的事务控制、使用代理实现事务控制
 - spring_aop_2_proxy：代理模式：jdk实现、cglib实现
+- spring_aop_3_xml：AOP讲解，以及基于xml配置spring AOP
+- spring_aop_4_annotation：完全基于注解配置spring AOP
 - spring_ioc_1：基于xml配置ioc，并学习spring几个重要类
 - spring_ioc_2_annotation：基于注解配置ioc
 - spring_ioc_3_account_xml：基于xml的ioc实现account案例的增删改查
