@@ -9,11 +9,12 @@
         <module name="spring_1_demo" />
         <module name="mybatis_crud" />
         <module name="mybatis_annotation" />
+        <module name="spring_ioc_1" />
         <module name="spring_ioc_2_annotation" />
-        <module name="mybatis_self" />
+        <module name="spring_aop_3_example" />
         <module name="spring_ioc_4_account_no_xml" />
         <module name="spring_ioc_3_account_xml" />
-        <module name="spring_ioc_1" />
+        <module name="mybatis_self" />
         <module name="spring_aop_2_proxy" />
         <module name="mybatis_2" />
         <module name="mybatis_1" />
@@ -29,6 +30,7 @@
       <module name="spring_1_demo" target="1.8" />
       <module name="spring_aop_1_transaction" target="1.8" />
       <module name="spring_aop_2_proxy" target="1.8" />
+      <module name="spring_aop_3_example" target="1.8" />
       <module name="spring_ioc_1" target="1.8" />
       <module name="spring_ioc_2_annotation" target="1.8" />
       <module name="spring_ioc_3_account_xml" target="1.8" />
