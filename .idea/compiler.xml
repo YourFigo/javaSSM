@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring_jdbcTemplate_1_demo" />
         <module name="mybatis_self" />
         <module name="spring_aop_3_xml" />
         <module name="mybatis_crud" />
@@ -37,6 +38,7 @@
       <module name="spring_ioc_2_annotation" target="1.8" />
       <module name="spring_ioc_3_account_xml" target="1.8" />
       <module name="spring_ioc_4_account_no_xml" target="1.8" />
+      <module name="spring_jdbcTemplate_1_demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

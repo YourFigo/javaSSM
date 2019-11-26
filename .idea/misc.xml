@@ -20,6 +20,7 @@
         <option value="$PROJECT_DIR$/spring_aop_3_example/pom.xml" />
         <option value="$PROJECT_DIR$/spring_aop_4_annotation/pom.xml" />
         <option value="$PROJECT_DIR$/spring_aop_3_xml/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_jdbcTemplate_1_demo/pom.xml" />
       </list>
     </option>
   </component>
