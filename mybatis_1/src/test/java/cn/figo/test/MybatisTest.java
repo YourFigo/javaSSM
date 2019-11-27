@@ -2,10 +2,12 @@ package cn.figo.test;
 
 import cn.figo.dao.IUserDao;
 import cn.figo.domain.User;
+import cn.figo.domain.UserVo;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.springframework.beans.BeanUtils;
 
 import java.io.InputStream;
 import java.util.List;
@@ -34,7 +36,12 @@ public class MybatisTest {
         //5.使用代理对象执行方法
         List<User> users = userDao.findAll();
         for(User user : users){
-            System.out.println(user);
+            // 使用 BeanUtils 对vo类进行封装
+            UserVo userVo = new UserVo();
+            BeanUtils.copyProperties(user,userVo);
+            userVo.setNewField("new");
+            System.out.println(userVo);
+            //System.out.println(user);
         }
         //6.释放资源
         session.close();
