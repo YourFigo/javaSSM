@@ -1,6 +1,5 @@
 package cn.figo.service.impl;
 
-
 import cn.figo.dao.IAccountDao;
 import cn.figo.domain.Account;
 import cn.figo.service.IAccountService;
@@ -24,8 +23,6 @@ public class AccountServiceImpl implements IAccountService {
 
     }
 
-
-
     @Override
     public void transfer(String sourceName, String targetName, Float money) {
         System.out.println("transfer....");
@@ -40,7 +37,7 @@ public class AccountServiceImpl implements IAccountService {
             //2.5更新转出账户
             accountDao.updateAccount(source);
 
-            int i=1/0;
+//            int i=1/0;
 
             //2.6更新转入账户
             accountDao.updateAccount(target);

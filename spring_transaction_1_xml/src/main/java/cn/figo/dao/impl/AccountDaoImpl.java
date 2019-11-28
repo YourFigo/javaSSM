@@ -1,6 +1,5 @@
 package cn.figo.dao.impl;
 
-
 import cn.figo.dao.IAccountDao;
 import cn.figo.domain.Account;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
