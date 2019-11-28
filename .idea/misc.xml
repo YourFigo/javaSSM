@@ -25,6 +25,7 @@
         <option value="$PROJECT_DIR$/spring_aop_6_transaction_annotation/pom.xml" />
         <option value="$PROJECT_DIR$/spring_aop_5_transaction_anno/pom.xml" />
         <option value="$PROJECT_DIR$/spring_aop_6_transaction_xml/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_transaction_1_xml/pom.xml" />
       </list>
     </option>
   </component>

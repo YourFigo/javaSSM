@@ -21,6 +21,7 @@
         <module name="mybatis_annotation" />
         <module name="spring_aop_2_proxy" />
         <module name="spring_aop_4_annotation" />
+        <module name="spring_transaction_1_xml" />
         <module name="spring_ioc_2_annotation" />
         <module name="mybatis_1" />
       </profile>
@@ -45,6 +46,7 @@
       <module name="spring_ioc_3_account_xml" target="1.8" />
       <module name="spring_ioc_4_account_no_xml" target="1.8" />
       <module name="spring_jdbcTemplate_1_demo" target="1.8" />
+      <module name="spring_transaction_1_xml" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
