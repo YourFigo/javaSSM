@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mybatis_self" />
         <module name="spring_aop_3_xml" />
-        <module name="spring_aop_5_transaction_xml" />
         <module name="mybatis_crud" />
         <module name="mybatis_2" />
         <module name="spring_jdbcTemplate_1_demo" />
@@ -16,6 +15,8 @@
         <module name="spring_aop_1_transaction" />
         <module name="spring_ioc_4_account_no_xml" />
         <module name="spring_1_demo" />
+        <module name="spring_aop_5_transaction_anno" />
+        <module name="spring_aop_6_transaction_xml" />
         <module name="spring_ioc_1" />
         <module name="mybatis_annotation" />
         <module name="spring_aop_2_proxy" />
@@ -35,7 +36,10 @@
       <module name="spring_aop_2_proxy" target="1.8" />
       <module name="spring_aop_3_xml" target="1.8" />
       <module name="spring_aop_4_annotation" target="1.8" />
+      <module name="spring_aop_5_transaction_anno" target="1.8" />
       <module name="spring_aop_5_transaction_xml" target="1.8" />
+      <module name="spring_aop_6_transaction_annotation" target="1.8" />
+      <module name="spring_aop_6_transaction_xml" target="1.8" />
       <module name="spring_ioc_1" target="1.8" />
       <module name="spring_ioc_2_annotation" target="1.8" />
       <module name="spring_ioc_3_account_xml" target="1.8" />

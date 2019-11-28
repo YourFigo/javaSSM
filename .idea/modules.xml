@@ -13,7 +13,8 @@
       <module fileurl="file://$PROJECT_DIR$/spring_aop_2_proxy/spring_aop_2_proxy.iml" filepath="$PROJECT_DIR$/spring_aop_2_proxy/spring_aop_2_proxy.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_aop_3_xml/spring_aop_3_xml.iml" filepath="$PROJECT_DIR$/spring_aop_3_xml/spring_aop_3_xml.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_aop_4_annotation/spring_aop_4_annotation.iml" filepath="$PROJECT_DIR$/spring_aop_4_annotation/spring_aop_4_annotation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring_aop_5_transaction_xml/spring_aop_5_transaction_xml.iml" filepath="$PROJECT_DIR$/spring_aop_5_transaction_xml/spring_aop_5_transaction_xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_aop_5_transaction_anno/spring_aop_5_transaction_anno.iml" filepath="$PROJECT_DIR$/spring_aop_5_transaction_anno/spring_aop_5_transaction_anno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_aop_6_transaction_xml/spring_aop_6_transaction_xml.iml" filepath="$PROJECT_DIR$/spring_aop_6_transaction_xml/spring_aop_6_transaction_xml.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_ioc_1/spring_ioc_1.iml" filepath="$PROJECT_DIR$/spring_ioc_1/spring_ioc_1.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_ioc_2_annotation/spring_ioc_2_annotation.iml" filepath="$PROJECT_DIR$/spring_ioc_2_annotation/spring_ioc_2_annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_ioc_3_account_xml/spring_ioc_3_account_xml.iml" filepath="$PROJECT_DIR$/spring_ioc_3_account_xml/spring_ioc_3_account_xml.iml" />
