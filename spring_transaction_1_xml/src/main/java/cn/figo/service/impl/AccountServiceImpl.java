@@ -40,7 +40,7 @@ public class AccountServiceImpl implements IAccountService {
             //2.5更新转出账户
             accountDao.updateAccount(source);
 
-//            int i=1/0;
+            int i=1/0;
 
             //2.6更新转入账户
             accountDao.updateAccount(target);
