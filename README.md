@@ -20,7 +20,7 @@
 - spring_ioc_3_account_xml：基于xml的ioc实现account案例的增删改查
 - spring_ioc_4_account_no_xml：学习spring注解(ioc注解 + 配置类注解)，实现完全摆脱xml实现account案例的增删改查
 - spring_jdbcTemplate_1_demo：spring的JdbcTemplate使用
-- spring_transaction_1_xml：spirng声明式事务控制的xml配置
+- spring_transaction_1_xml：spirng声明式事务控制的xml配置，编程式事务控制
 - spring_transaction_2_anno：spirng声明式事务控制的注解配置
 - 
 - 
