@@ -13,8 +13,6 @@
 <body>
     <h3>入门成功</h3>
 
-    ${ msg }
-    ${sessionScope}
 
 </body>
 </html>
