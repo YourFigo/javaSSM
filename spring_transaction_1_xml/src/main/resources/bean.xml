@@ -12,8 +12,12 @@
         http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!-- 配置业务层-->
-    <bean id="accountService" class="cn.figo.service.impl.AccountServiceImpl">
+<!--    <bean id="accountService" class="cn.figo.service.impl.AccountServiceImpl">
         <property name="accountDao" ref="accountDao"></property>
+    </bean>-->
+    <bean id="accountService" class="cn.figo.service.impl.AccountServiceImpl2">
+        <property name="accountDao" ref="accountDao"></property>
+        <property name="transactionTemplate" ref="transactionTemplate"></property>
     </bean>
 
     <!-- 配置账户的持久层-->
@@ -70,4 +74,9 @@
         <!--建立切入点表达式和事务通知的对应关系 -->
         <aop:advisor advice-ref="txAdvice" pointcut-ref="pt1"></aop:advisor>
     </aop:config>
+
+    <!--配置事务模板对象-->
+    <bean id="transactionTemplate" class="org.springframework.transaction.support.TransactionTemplate">
+        <property name="transactionManager" ref="transactionManager"></property>
+    </bean>
 </beans>
