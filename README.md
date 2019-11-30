@@ -13,10 +13,16 @@
 - spring_aop_2_proxy：代理模式：jdk实现、cglib实现
 - spring_aop_3_xml：AOP讲解，以及基于xml配置spring AOP
 - spring_aop_4_annotation：完全基于注解配置spring AOP
+- spring_aop_5_transaction_anno：基于注解的AOP实现事务控制
+- spring_aop_6_transaction_xml：基于xml的AOP实现事务控制
 - spring_ioc_1：基于xml配置ioc，并学习spring几个重要类
 - spring_ioc_2_annotation：基于注解配置ioc
 - spring_ioc_3_account_xml：基于xml的ioc实现account案例的增删改查
 - spring_ioc_4_account_no_xml：学习spring注解(ioc注解 + 配置类注解)，实现完全摆脱xml实现account案例的增删改查
+- spring_jdbcTemplate_1_demo：spring的JdbcTemplate使用
+- spring_transaction_1_xml：spirng声明式事务控制的xml配置
+- spring_transaction_2_anno：spirng声明式事务控制的注解配置
+- 
 - 
 ---
 ## `配套讲解` :stuck_out_tongue_winking_eye:
