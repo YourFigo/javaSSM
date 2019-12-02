@@ -1,6 +1,8 @@
 package cn.figo.domain;
 
 import java.io.Serializable;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @Author Figo
@@ -14,12 +16,31 @@ public class Account implements Serializable {
 
     private User user;
 
+    private List<User> list;
+    private Map<String,User> map;
+
     public User getUser() {
         return user;
     }
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public List<User> getList() {
+        return list;
+    }
+
+    public void setList(List<User> list) {
+        this.list = list;
+    }
+
+    public Map<String, User> getMap() {
+        return map;
+    }
+
+    public void setMap(Map<String, User> map) {
+        this.map = map;
     }
 
     public String getUsername() {
@@ -54,6 +75,8 @@ public class Account implements Serializable {
                 ", password='" + password + '\'' +
                 ", money=" + money +
                 ", user=" + user +
+                ", list=" + list +
+                ", map=" + map +
                 '}';
     }
 }

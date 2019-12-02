@@ -17,12 +17,25 @@
     <a href="user/testRequestMapping?username=tom">测试RequestMapping注解</a>
 
     <form action="user/testParams">
-        姓名：<input type="text" name="username">
-        密码：<input type="text" name="password">
-        金额: <input type="text" name="money">
-        用户名: <input type="text" name="user.uname">
-        年龄: <input type="text" name="user.age">
+        姓名：<input type="text" name="username"><br>
+        密码：<input type="text" name="password"><br>
+        金额: <input type="text" name="money"><br>
+        用户名: <input type="text" name="user.uname"><br>
+        年龄: <input type="text" name="user.age"><br>
+        用户名: <input type="text" name="list[0].uname"><br>
+        年龄: <input type="text" name="list[0].age"><br>
+        用户名: <input type="text" name="map['one'].uname"><br>
+        年龄: <input type="text" name="map['one'].age"><br>
         <input type="submit" value="提交">
     </form>
+
+    <form action="user/testParamsConvert">
+        用户名: <input type="text" name="uname"><br>
+        年龄: <input type="text" name="age"><br>
+        生日: <input type="text" name="date"><br>
+        <input type="submit" value="提交">
+    </form>
+
+    <a href="user/testServlet">获取servlet的api</a>
 </body>
 </html>
