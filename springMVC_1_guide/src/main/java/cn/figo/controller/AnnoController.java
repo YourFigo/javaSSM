@@ -171,6 +171,7 @@ public class AnnoController {
     public void showUser(String uname, Map<String,User> map){
         System.out.println("showUser执行了...");
         // 通过用户查询数据库（模拟）
+        // 前端传来的数据不完整时，其他属性默认用数据库中的属性值
         User user = new User();
         user.setUname(uname);
         user.setAge(50);
