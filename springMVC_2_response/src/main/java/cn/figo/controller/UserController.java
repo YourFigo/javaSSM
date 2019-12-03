@@ -32,7 +32,7 @@ public class UserController {
         user.setUsername("美美");
         user.setPassword("123");
         user.setAge(30);
-        // model对象
+        // model对象，底层会存储到request域对象中
         model.addAttribute("user",user);
         return "success";
     }
@@ -42,13 +42,13 @@ public class UserController {
      * 这里默认返回 testVoid.jsp 没有这个页面会报404
      * @param model
      */
-/*    @RequestMapping("/testVoid")
+//    @RequestMapping("/testVoid")
     public void testVoid(Model model){
         System.out.println("testString方法");
-    }*/
+    }
 
     /**
-     * 基于上面的情况，我们可以转发的别的页面
+     * 基于上面的情况，我们可以转发的别的页面，也可以直接响应数据
      * @param request
      * @param response
      * @throws Exception
@@ -57,10 +57,10 @@ public class UserController {
     public void testVoid(HttpServletRequest request, HttpServletResponse response) throws Exception {
         System.out.println("testVoid方法执行了...");
         // 编写请求转发的程序
-//         request.getRequestDispatcher("/WEB-INF/pages/success.jsp").forward(request,response);
+        // request.getRequestDispatcher("/WEB-INF/pages/success.jsp").forward(request,response);
 
         // 重定向
-//         response.sendRedirect(request.getContextPath()+"/index.jsp");
+        // response.sendRedirect(request.getContextPath()+"/index.jsp");
 
         // 设置中文乱码
         response.setCharacterEncoding("UTF-8");
@@ -106,8 +106,8 @@ public class UserController {
     public String testForwardOrRedirect(Model model){
         System.out.println("testForwardOrRedirect 方法");
 
-//        return "forward:/WEB-INF/pages/success.jsp";
-         return "redirect:/index.jsp";
+        // return "forward:/WEB-INF/pages/success.jsp";
+        return "redirect:/index.jsp";
     }
 
     /**
