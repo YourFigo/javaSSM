@@ -15,5 +15,10 @@
     ${requestScope.user}<br>
     ${requestScope.user.username}<br>
 
+    <h3>查询所有的数据</h3>
+    <c:forEach items="${ users }" var="user">
+        ${ user.username }
+    </c:forEach>
+
 </body>
 </html>
