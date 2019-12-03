@@ -3,7 +3,9 @@ package cn.figo.controller;
 import cn.figo.domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -106,5 +108,23 @@ public class UserController {
 
 //        return "forward:/WEB-INF/pages/success.jsp";
          return "redirect:/index.jsp";
+    }
+
+    /**
+     * 模拟异步请求响应
+     * 将请求体字符串封装为bean对象，需要jar包
+     * @ResponseBody 将对象转为json响应到前端
+     * @RequestBody 接收前端的请全体字符串转换为bean对象
+     */
+    @RequestMapping("/testAjax")
+    public @ResponseBody User testAjax(@RequestBody User user){
+        System.out.println("testAjax方法执行了...");
+        // 客户端发送ajax的请求，传的是json字符串，后端把json字符串封装到user对象中
+        System.out.println(user);
+        // 做响应，模拟查询数据库
+        user.setUsername("haha");
+        user.setAge(40);
+        // 做响应
+        return user;
     }
 }
