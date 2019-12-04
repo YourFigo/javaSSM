@@ -20,11 +20,6 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <!--前端控制器，哪些静态资源不拦截-->
-    <mvc:resources location="/css/" mapping="/css/**"/>
-    <mvc:resources location="/images/" mapping="/images/**"/>
-    <mvc:resources location="/js/" mapping="/js/**"/>
-
     <!--配置文件解析器对象-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="maxUploadSize" value="10485760" />
