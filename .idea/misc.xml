@@ -3,6 +3,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/springMVC_1_guide" />
     <file type="web" url="file://$PROJECT_DIR$/springMVC_2_response" />
+    <file type="web" url="file://$PROJECT_DIR$/springMVC_3_fileupload" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -33,6 +34,7 @@
         <option value="$PROJECT_DIR$/spring_transaction_2_anno/pom.xml" />
         <option value="$PROJECT_DIR$/springMVC_1_guide/pom.xml" />
         <option value="$PROJECT_DIR$/springMVC_2_response/pom.xml" />
+        <option value="$PROJECT_DIR$/springMVC_3_fileupload/pom.xml" />
       </list>
     </option>
   </component>
