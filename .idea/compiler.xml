@@ -16,6 +16,7 @@
         <module name="springMVC_2_response" />
         <module name="spring_aop_1_transaction" />
         <module name="spring_transaction_2_anno" />
+        <module name="springMVC_3_fileuploadserver" />
         <module name="mybatis_crud" />
         <module name="spring_aop_5_transaction_anno" />
         <module name="springMVC_3_fileupload" />
@@ -55,6 +56,7 @@
       <module name="springMVC_1_guide" target="1.8" />
       <module name="springMVC_2_response" target="1.8" />
       <module name="springMVC_3_fileupload" target="1.8" />
+      <module name="springMVC_3_fileuploadserver" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

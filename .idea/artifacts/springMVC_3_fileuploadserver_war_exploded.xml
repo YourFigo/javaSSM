@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="springMVC_3_fileuploadserver:war exploded">
+    <output-path>$PROJECT_DIR$/springMVC_3_fileuploadserver/target/springMVC_3_fileuploadserver</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>springMVC_3_fileuploadserver</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="springMVC_3_fileuploadserver" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/springMVC_3_fileuploadserver/target/springMVC_3_fileuploadserver/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="springMVC_3_fileuploadserver/web/Web" />
+    </root>
+  </artifact>
+</component>

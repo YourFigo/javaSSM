@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/springMVC_1_guide/springMVC_1_guide.iml" filepath="$PROJECT_DIR$/springMVC_1_guide/springMVC_1_guide.iml" />
       <module fileurl="file://$PROJECT_DIR$/springMVC_2_response/springMVC_2_response.iml" filepath="$PROJECT_DIR$/springMVC_2_response/springMVC_2_response.iml" />
       <module fileurl="file://$PROJECT_DIR$/springMVC_3_fileupload/springMVC_3_fileupload.iml" filepath="$PROJECT_DIR$/springMVC_3_fileupload/springMVC_3_fileupload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springMVC_3_fileuploadserver/springMVC_3_fileuploadserver.iml" filepath="$PROJECT_DIR$/springMVC_3_fileuploadserver/springMVC_3_fileuploadserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_1_demo/spring_1_demo.iml" filepath="$PROJECT_DIR$/spring_1_demo/spring_1_demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_aop_1_transaction/spring_aop_1_transaction.iml" filepath="$PROJECT_DIR$/spring_aop_1_transaction/spring_aop_1_transaction.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_aop_2_proxy/spring_aop_2_proxy.iml" filepath="$PROJECT_DIR$/spring_aop_2_proxy/spring_aop_2_proxy.iml" />
