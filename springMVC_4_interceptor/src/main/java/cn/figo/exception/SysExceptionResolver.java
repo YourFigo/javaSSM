@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @Author Figo
  * @Date 2019/12/5 23:05
- * 异常处理类
+ * 异常处理器
  */
 public class SysExceptionResolver implements HandlerExceptionResolver {
 
     /**
-     * 处理异常业务逻辑
+     * 处理异常业务逻辑，当控制器抛出异常后，会进入异常处理类执行
      * @param request
      * @param response
      * @param handler
@@ -36,5 +36,4 @@ public class SysExceptionResolver implements HandlerExceptionResolver {
         mv.setViewName("error");
         return mv;
     }
-
 }
