@@ -7,28 +7,29 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring_1_demo" />
-        <module name="mybatis_1" />
+        <module name="mybatis_self" />
+        <module name="spring_ioc_3_account_xml" />
         <module name="spring_aop_6_transaction_xml" />
+        <module name="springMVC_4_interceptor" />
         <module name="spring_aop_3_xml" />
         <module name="mybatis_2" />
         <module name="spring_jdbcTemplate_1_demo" />
-        <module name="spring_aop_4_annotation" />
+        <module name="springMVC_3_fileuploadserver" />
         <module name="springMVC_2_response" />
         <module name="spring_aop_1_transaction" />
-        <module name="spring_transaction_2_anno" />
-        <module name="springMVC_3_fileuploadserver" />
+        <module name="spring_ioc_4_account_no_xml" />
         <module name="mybatis_crud" />
         <module name="spring_aop_5_transaction_anno" />
         <module name="springMVC_3_fileupload" />
         <module name="spring_ioc_1" />
         <module name="mybatis_annotation" />
         <module name="spring_aop_2_proxy" />
-        <module name="mybatis_self" />
-        <module name="spring_ioc_3_account_xml" />
+        <module name="spring_transaction_2_anno" />
+        <module name="spring_aop_4_annotation" />
         <module name="spring_transaction_1_xml" />
         <module name="spring_ioc_2_annotation" />
         <module name="springMVC_1_guide" />
-        <module name="spring_ioc_4_account_no_xml" />
+        <module name="mybatis_1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="9">
@@ -57,6 +58,7 @@
       <module name="springMVC_2_response" target="1.8" />
       <module name="springMVC_3_fileupload" target="1.8" />
       <module name="springMVC_3_fileuploadserver" target="1.8" />
+      <module name="springMVC_4_interceptor" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
