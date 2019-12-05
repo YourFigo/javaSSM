@@ -25,6 +25,8 @@
     <mvc:resources location="/images/" mapping="/images/**"/>
     <mvc:resources location="/js/" mapping="/js/**"/>
 
+    <!--配置异常处理器-->
+    <bean id="sysExceptionResolver" class="cn.figo.exception.SysExceptionResolver"/>
 
     <!-- 开启SpringMVC框架注解的支持 -->
     <mvc:annotation-driven />

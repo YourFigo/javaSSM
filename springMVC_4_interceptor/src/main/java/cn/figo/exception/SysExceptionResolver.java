@@ -21,7 +21,8 @@ public class SysExceptionResolver implements HandlerExceptionResolver {
      * @param ex
      * @return
      */
-    public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
+    public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response,
+                                         Object handler, Exception ex) {
         // 获取到异常对象
         SysException e = null;
         if(ex instanceof SysException){
