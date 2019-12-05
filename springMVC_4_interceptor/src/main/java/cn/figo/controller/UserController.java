@@ -12,14 +12,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/user")
 public class UserController {
 
-
     @RequestMapping("/testException")
     public String testException() throws SysException {
         System.out.println("testException执行了...");
 
         try {
             // 模拟异常
-            int a = 10/0;
+//            int a = 10/0;
         } catch (Exception e) {
             // 打印异常信息
             e.printStackTrace();
