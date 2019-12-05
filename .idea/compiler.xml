@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring_1_demo" />
+        <module name="ssm_all" />
         <module name="mybatis_self" />
         <module name="spring_ioc_3_account_xml" />
         <module name="spring_aop_6_transaction_xml" />
@@ -59,6 +60,7 @@
       <module name="springMVC_3_fileupload" target="1.8" />
       <module name="springMVC_3_fileuploadserver" target="1.8" />
       <module name="springMVC_4_interceptor" target="1.8" />
+      <module name="ssm_all" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

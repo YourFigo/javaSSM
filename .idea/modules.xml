@@ -27,6 +27,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring_jdbcTemplate_1_demo/spring_jdbcTemplate_1_demo.iml" filepath="$PROJECT_DIR$/spring_jdbcTemplate_1_demo/spring_jdbcTemplate_1_demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_transaction_1_xml/spring_transaction_1_xml.iml" filepath="$PROJECT_DIR$/spring_transaction_1_xml/spring_transaction_1_xml.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_transaction_2_anno/spring_transaction_2_anno.iml" filepath="$PROJECT_DIR$/spring_transaction_2_anno/spring_transaction_2_anno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_all/ssm_all.iml" filepath="$PROJECT_DIR$/ssm_all/ssm_all.iml" />
     </modules>
   </component>
 </project>

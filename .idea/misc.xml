@@ -6,6 +6,7 @@
     <file type="web" url="file://$PROJECT_DIR$/springMVC_3_fileupload" />
     <file type="web" url="file://$PROJECT_DIR$/springMVC_3_fileuploadserver" />
     <file type="web" url="file://$PROJECT_DIR$/springMVC_4_interceptor" />
+    <file type="web" url="file://$PROJECT_DIR$/ssm_all" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -39,6 +40,7 @@
         <option value="$PROJECT_DIR$/springMVC_3_fileupload/pom.xml" />
         <option value="$PROJECT_DIR$/springMVC_3_fileuploadserver/pom.xml" />
         <option value="$PROJECT_DIR$/springMVC_4_interceptor/pom.xml" />
+        <option value="$PROJECT_DIR$/ssm_all/pom.xml" />
       </list>
     </option>
   </component>
