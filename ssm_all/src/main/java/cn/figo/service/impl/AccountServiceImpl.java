@@ -2,6 +2,7 @@ package cn.figo.service.impl;
 
 import cn.figo.domain.Account;
 import cn.figo.service.AccountService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -9,6 +10,7 @@ import java.util.List;
  * @Author Figo
  * @Date 2019/12/6 0:18
  */
+@Service("accountService")
 public class AccountServiceImpl implements AccountService {
 
     public List<Account> findAll() {
