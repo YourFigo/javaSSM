@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @Author Figo
  * @Date 2019/12/6 21:08
  */
-public class testSpring {
+public class TestSpring {
     @Test
     public void run1(){
         // 加载配置文件
