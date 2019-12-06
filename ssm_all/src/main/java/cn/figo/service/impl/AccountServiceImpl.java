@@ -3,7 +3,8 @@ package cn.figo.service.impl;
 import cn.figo.dao.AccountDao;
 import cn.figo.domain.Account;
 import cn.figo.service.AccountService;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +20,7 @@ public class AccountServiceImpl implements AccountService {
     @Autowired
     private AccountDao accountDao;
 
-    private Logger logger = Logger.getLogger(AccountServiceImpl.class);
+    private Logger logger = LoggerFactory.getLogger(AccountServiceImpl.class);
 
     public List<Account> findAll() {
         System.out.println("业务层：查询所有账户...");
